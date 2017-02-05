@@ -1,6 +1,7 @@
 # PDBsort
 This script organises and moves PDB files after running the Rosetta Epigraft protocol as an array in a High Preformance Computer.
  
+ 
 
 ## DESCRIPTION:
 This script will make it easy to search for only files with the correct size (150 amino acids or less) rather than look through all mixed (large and small) returned structures as a result of the Rosetta Epigraft Protocol. These structures (150 amino acids or less) can then be used for the Rosetta FFL (Fold From Loop) protocol and the Rosetta Abinition protocol. Contact author at sari.sabban@gmail.com for any questions regarding this script.
