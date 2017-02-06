@@ -29,11 +29,11 @@ mkdir scaffolds_good_size
 mkdir chosen
 find . -name '*.pdb' -exec mv {} scaffolds_bad_size \;
 find . -type f -name '*.sc' -exec cat {} + > scores.sc
-grep SCORE scores.sc | sort -nk +2 | awk '{print $2 "\t" $4 "\t" $13 "\t" $23 "\t" $32}' > sorted_scores
+grep SCORE scores.sc | sort -nk +2 | awk '{print $2 "\t" $3 "\t" $4 "\t" $13 "\t" $23 "\t" $26 "\t" $32}' > sorted_scores
 sed -i "/description/d}" sorted_scores
 rm -r res_*
 
-for file in scaffolds/*.pdb; do
+for file in scaffolds_bad_size/*.pdb; do
 	CHAINAnumb=`grep ATOM $file | awk '{print $5 "\t" $6}' | grep A | tail -n 1 | awk '{print $2}'`
 	CHAINBnumb=`grep ATOM $file | awk '{print $5 "\t" $6}' | grep B | tail -n 1 | awk '{print $2}'`
 
@@ -44,6 +44,6 @@ for file in scaffolds/*.pdb; do
 
 	if (( $AminoAcids \< 150 ))
 		then
-			mv $file correct_size;
+			mv $file scaffolds_good_size;
 	fi
 done
