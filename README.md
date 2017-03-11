@@ -11,7 +11,9 @@ This script will make it easy to search for only files with the correct size (15
 ## HOW TO USE:
 
 1. After running the Rosetta Epigraft protocol using an array execute this script in the same location where the files are located. If the files are in separate sub-folders run the script the top level folder.
-2. The script will re-organise the structure as follows:
+2. Run this script by navigating to the working directiry and typing in the command line:
+`./PDBsort_150aa.bash`
+3. The script will re-organise the structure as follows:
    + **scaffolds_bad_size** -> This directory will contain all the proteins that are +150 amino acids in size. 
    + **scaffolds_good_size** -> This directory will contain all the proteins that are 150 amino acids in size or less.
    + **chosen** -> this directory will be empty, ready for the user to copy to it all the structures he/she deems good enough to work on.
